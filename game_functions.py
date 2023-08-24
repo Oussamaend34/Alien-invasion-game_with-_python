@@ -149,7 +149,7 @@ def check_high_score(stats, sb):
 def check_bullet_alien_collisions(ai_settings, screen,stats, sb, ship, aliens, bullets):
     """Respnd to bullet and aliens that have collisions."""
     # Remove any bullets and aliens that have collided.
-    collisions = pygame.sprite.groupcollide(bullets, aliens, False, True)
+    collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
     
     if collisions:
         for aliens in collisions.values():
